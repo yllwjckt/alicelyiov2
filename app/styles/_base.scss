@@ -1,0 +1,67 @@
+@import 'variables';
+
+:root {
+  --background-color: #{$bg-color};
+  --text-color: #{$txt-color};
+  --accent-color: #{$accent-color};
+  --link-color: #{$link-color};
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: $martel;
+}
+
+a {
+  color: var(--link-color);
+}
+
+h1, h2, h3 {
+  font-family: $playfair_display;
+}
+
+h1 span, h2 span, h3 {
+  color: var(--accent-color);
+}
+
+/** Browse My Work **/
+.next-page {
+  align-self: center;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: auto;
+
+  .browse {
+    font-size: 2.25rem;
+  }
+
+  .line-down {
+    border-right: 1px solid var(--text-color);
+    display: block;
+    height: 6.25rem;
+    margin: 0 auto;
+    width: 1px;
+  }
+}
+
+/** Home Animation **/
+.circle-fill {
+  background: var(--accent-color);
+  border-radius: 50%;
+  height: 52.3125rem;
+  right: -22rem;
+  top: -18rem;
+  width: 52.3125rem;
+}
+
+.circle-outline {
+  background: transparent;
+  border: 8px solid var(--text-color);
+  border-radius: 50%;
+  height: 58.25rem;
+  right: -28rem;
+  top: -34rem;
+  width: 60.4375rem;
+}
