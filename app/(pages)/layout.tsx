@@ -15,16 +15,14 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="overflow-x-hidden">
-        <Header />
-        <main className="flex flex-col p-8 md:pt-32 md:p-16 relative">
-          <div className="container mx-auto">
-            {children}
-          </div>
-        </main>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Header />
+      <main className="flex flex-col p-8 md:pt-32 md:p-16 relative">
+        <div className="container mx-auto">
+          {children}
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
