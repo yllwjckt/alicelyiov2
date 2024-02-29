@@ -17,7 +17,7 @@ export default function Footer() {
         className="flex gap-8 justify-center text-center mx-auto"
       >
         <Link href="https://www.linkedin.com/in/alicelly" target="_blank">
-          <Image
+          <img
             src="/li_icon.png"
             alt="LinkedIn"
             width={32}
@@ -25,7 +25,7 @@ export default function Footer() {
           />
         </Link>
         <Link href="https://github.com/yllwjckt/" target="_blank" className="inline-block">
-          <Image
+          <img
             src="/gh_icon.png"
             alt="GitHub"
             width={32}
@@ -44,7 +44,7 @@ export default function Footer() {
         <p className="text-xl">Made by Alice &copy; 2024</p>
         <p className="text-xl">Made with
           <Link href="https://nextjs.org/" target="_blank">
-            <Image
+            <img
               src="/next.png"
               alt="Next.js"
               width={70}

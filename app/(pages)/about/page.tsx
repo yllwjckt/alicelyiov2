@@ -23,7 +23,7 @@ export default function About() {
               <p className="mb-4">I enjoy spending time with my amazing daughter and playing cozy video games. You'll often find me in the office with earbuds in, playing Stardew Valley or Disney Dreamlight Valley.</p>
             </div>
             <div className="col-span-12 md:col-span-4 order-1 md:order-2">
-              <Image 
+              <img 
                 src="/profile_pic.png"
                 alt="Photo of Alice"
                 width={400}
