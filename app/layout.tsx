@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import "./styles/_base.scss";
 
 export const metadata: Metadata = {
@@ -14,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="overflow-x-hidden">{children}</body>
+      <body className="overflow-x-hidden">
+        {children}
+      </body>
     </html>
   );
 }

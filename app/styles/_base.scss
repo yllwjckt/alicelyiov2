@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
 @import 'variables';
 
 :root {
@@ -13,36 +23,121 @@ body {
   font-family: $martel;
 }
 
-a {
-  color: var(--link-color);
-}
+@layer base {
+  a:link,
+  a:visited {
+    color: var(--link-color);
 
-h1, h2, h3 {
-  font-family: $playfair_display;
-}
-
-h1 span, h2 span, h3 {
-  color: var(--accent-color);
-}
-
-/** Browse My Work **/
-.next-page {
-  align-self: center;
-  bottom: 0;
-  position: absolute;
-  text-align: center;
-  width: auto;
-
-  .browse {
-    font-size: 2.25rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  h1, h2, h3 {
+    font-family: $playfair_display;
+  }
+  
+  h1 span, h2 span, h3 {
+    color: var(--accent-color);
   }
 
-  .line-down {
-    border-right: 1px solid var(--text-color);
-    display: block;
-    height: 6.25rem;
-    margin: 0 auto;
-    width: 1px;
+  /** Mobile Nav **/
+  .logo a {
+    color: $txt-color;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  svg {
+    &.overlay {
+      right: 1rem;
+      position: absolute;
+      top: 1.125rem;
+      z-index: 12;
+  
+      @media (min-width: $md) {
+        position: static;
+      }
+    }
+  }
+
+  /** Mobile Nav **/
+  .mobile-menu {
+    background-color: $accent-color;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+
+    @media (min-width: $md) {
+      background-color: transparent;
+      height: 100%;
+      left: auto;
+      right: 4rem;
+      width: 50vw;
+    }
+
+    ul {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      height: 100%;
+      justify-content: center;
+
+      @media (min-width: $md) {
+        flex-direction: row;
+        gap: 4rem;
+        justify-content: flex-end;
+        padding-right: 2rem;
+      }
+
+      li {
+        padding: 0;
+        text-align: center;
+  
+        a {
+          color: $txt-color;
+          display: block;
+          font-size: 1.5rem;
+          font-weight: 700;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /** Browse My Work **/
+  .next-page {
+    align-self: center;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: auto;
+
+    .browse {
+      color: $txt-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+      
+      @media (min-width: $md) {
+        font-size: 2.25rem;
+      }
+    }
+
+    .line-down {
+      border-right: 1px solid var(--text-color);
+      display: block;
+      height: 6.25rem;
+      margin: 0 auto;
+      width: 1px;
+    }
   }
 }
 
@@ -51,8 +146,8 @@ h1 span, h2 span, h3 {
   background: var(--accent-color);
   border-radius: 50%;
   height: 52.3125rem;
-  right: -22rem;
-  top: -18rem;
+  right: -28rem;
+  top: -32rem;
   width: 52.3125rem;
 }
 
@@ -62,6 +157,6 @@ h1 span, h2 span, h3 {
   border-radius: 50%;
   height: 58.25rem;
   right: -28rem;
-  top: -34rem;
+  top: -48rem;
   width: 60.4375rem;
 }
