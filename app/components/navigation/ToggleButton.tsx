@@ -3,12 +3,13 @@
 import React from "react";
 import { motion, Transition, SVGMotionProps } from "framer-motion";
 
-interface Props extends SVGMotionProps {
+interface Props extends SVGMotionProps<any> {
   isOpen?: boolean;
   color?: string;
   strokeWidth?: string | number;
   transition?: Transition;
   lineProps?: any;
+  onClick?: () => void;
 }
 
 const ToggleButton = ({
@@ -17,7 +18,7 @@ const ToggleButton = ({
   height = 32,
   strokeWidth = 1,
   color = "#FFE8C2",
-  transition = null,
+  transition = undefined,
   lineProps = null,
   ...props
 }: Props) => {
@@ -61,9 +62,9 @@ const ToggleButton = ({
   const unitHeight = 5;
   const unitWidth = (unitHeight * (width as number)) / (height as number);
 
-  const handleClick = (e) => {
+  const handleClick = ({e}: any) => {
     e.stopPropogation();
-    onClick();
+    onclick;
   }
 
   return (

@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.eslintignore
 
 # testing
 /coverage
@@ -21,6 +22,7 @@ cypress.config.ts
 # misc
 .DS_Store
 *.pem
+.eslintrc.json
 
 # debug
 npm-debug.log*

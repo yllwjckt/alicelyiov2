@@ -16,7 +16,7 @@ const links = [
   }
 ]
 
-export const NavItem = ({ i, onClick }) => {
+export const NavItem = ({ i, onClick }: any) => {
   const linkRef = links[i];
 
   return (

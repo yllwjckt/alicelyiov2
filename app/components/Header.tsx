@@ -3,7 +3,6 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import { ToggleButton } from "./navigation/ToggleButton";
 import { NavItem } from "./navigation/NavItem";
 import { useOnClickOutside } from "./navigation/useOnClickOutside";
@@ -68,6 +67,7 @@ export default function Header() {
               <ul>
                 {itemIds.map(i => (
                   <motion.li
+                    key={i}
                     variants={{
                       opened: {
                         y: 0,
